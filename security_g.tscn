@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0xvvs175nlba"]
+
+[ext_resource type="Script" path="res://Security G.gd" id="1_pruih"]
+[ext_resource type="Texture2D" uid="uid://c3towl8laordl" path="res://assets/Security G.png" id="2_xmsnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcc2g"]
+size = Vector2(71, 126)
+
+[node name="Security G" type="Area2D"]
+script = ExtResource("1_pruih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 4)
+shape = SubResource("RectangleShape2D_wcc2g")
+
+[node name="SecurityG" type="Sprite2D" parent="."]
+position = Vector2(-4, 4)
+scale = Vector2(0.18702, 0.173589)
+texture = ExtResource("2_xmsnm")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

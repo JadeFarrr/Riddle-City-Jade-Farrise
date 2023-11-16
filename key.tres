@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://ca55qlxs8n54x"]
+
+[resource]
+default_font_size = 8
+/colors/color = Color(0.447059, 0.611765, 0.556863, 1)
+/font_sizes/fontsize = 6

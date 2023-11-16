@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd06hlhj18lxm"]
+
+[ext_resource type="Texture2D" uid="uid://c5e7s285gg1bq" path="res://assets/movie scene 3rd.jpeg" id="1_80tg1"]
+[ext_resource type="PackedScene" uid="uid://bndg4xco7ks8g" path="res://randomtest.tscn" id="2_d8cek"]
+
+[node name="third scene" type="Node2D"]
+
+[node name="MovieScene3Rd" type="Sprite2D" parent="."]
+position = Vector2(2.00003, 2)
+scale = Vector2(1.67633, 1.51351)
+texture = ExtResource("1_80tg1")
+
+[node name="randomtest" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(-416, 317)
+
+[node name="randomtest2" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(-107, 317)
+
+[node name="randomtest3" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(202, 317)
+
+[node name="randomtest4" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(511, 317)
+
+[node name="randomtest5" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(-703, 317)
+
+[node name="randomtest6" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(485, 36)
+
+[node name="randomtest7" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(121, 33)
+
+[node name="randomtest8" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(-212, -43)
+
+[node name="randomtest9" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(-519, -43)
+
+[node name="randomtest10" parent="." instance=ExtResource("2_d8cek")]
+position = Vector2(-623, -43)

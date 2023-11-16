@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://h61icwhew484"]
+
+[ext_resource type="Script" path="res://second scene.gd" id="1_dxsbh"]
+[ext_resource type="Texture2D" uid="uid://b8lq53ejxp85g" path="res://2nd Scene.jpg" id="2_06ekg"]
+[ext_resource type="PackedScene" uid="uid://bndg4xco7ks8g" path="res://randomtest.tscn" id="3_fnavk"]
+[ext_resource type="Texture2D" uid="uid://b5y5pola20k73" path="res://assets/Movie theatre.png" id="4_s0ss5"]
+[ext_resource type="PackedScene" uid="uid://b71gy52iic6jm" path="res://main_character.tscn" id="5_xqech"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s046b"]
+size = Vector2(91, 74)
+
+[node name="second scene" type="Node2D"]
+script = ExtResource("1_dxsbh")
+
+[node name="2NdScene" type="Sprite2D" parent="."]
+position = Vector2(-1229.25, 9.00018)
+scale = Vector2(1.33791, 1.21491)
+texture = ExtResource("2_06ekg")
+
+[node name="randomtest" parent="." instance=ExtResource("3_fnavk")]
+position = Vector2(-1656, 278)
+
+[node name="randomtest2" parent="." instance=ExtResource("3_fnavk")]
+position = Vector2(-1347, 278)
+
+[node name="randomtest3" parent="." instance=ExtResource("3_fnavk")]
+position = Vector2(-1039, 278)
+
+[node name="randomtest4" parent="." instance=ExtResource("3_fnavk")]
+position = Vector2(-860, 278)
+
+[node name="MovieTheatre" type="Sprite2D" parent="."]
+position = Vector2(-179.5, 11)
+scale = Vector2(0.895041, 0.821958)
+texture = ExtResource("4_s0ss5")
+
+[node name="randomtest6" parent="." instance=ExtResource("3_fnavk")]
+position = Vector2(-335, 278)
+
+[node name="randomtest7" parent="." instance=ExtResource("3_fnavk")]
+position = Vector2(-86, 278)
+
+[node name="randomtest5" parent="randomtest7" instance=ExtResource("3_fnavk")]
+position = Vector2(-519, 0)
+
+[node name="randomtest8" parent="." instance=ExtResource("3_fnavk")]
+position = Vector2(174, 278)
+
+[node name="MainCharacter" parent="." instance=ExtResource("5_xqech")]
+position = Vector2(-1460, 205)
+
+[node name="Camera2D" type="Camera2D" parent="MainCharacter"]
+position = Vector2(947.134, -622.435)
+scale = Vector2(3.15711, 2.93601)
+zoom = Vector2(1.2, 1.2)
+limit_left = -1741
+limit_top = -264
+limit_right = 239
+limit_bottom = -1411
+limit_smoothed = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-4, 210)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(71, 5)
+shape = SubResource("RectangleShape2D_s046b")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
